@@ -2,9 +2,11 @@ class Weapon
 {
     public string Name;
     public int Damage;
+    public int ID;
 
-    public Weapon(string name, int damage)
+    public Weapon(string name, int damage, int id)
     {
+        ID = id;
         Name = name;
         Damage = damage;
     }
