@@ -12,6 +12,18 @@ public class Monster
         Name = name;
         MaximumDamage = maximumdamage;
         CurrentHitPoints = currenthitpoints;
-        MaximumHitPoints = MaximumHitPoints;
+        MaximumHitPoints = maximumhitpoints;
+    }
+
+    public static bool IfAlive()
+    {
+        if (CurrentHitPoints != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

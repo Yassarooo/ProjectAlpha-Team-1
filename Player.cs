@@ -1,8 +1,7 @@
-using System.Diagnostics.CodeAnalysis;
-
 public class Player
 {
     public string Name;
+    public int Health;
     public int CurrentHitPoints;
     public int MaximumHitPoints;
     public Weapon CurrentWeapon;
@@ -16,4 +15,23 @@ public class Player
         CurrentWeapon = null;
         CurrentLocation = null;
     }
+
+    public bool IfAlive()
+    {
+        if (CurrentHitPoints != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static void Heal(int amount)
+    {
+        CurrentHitPoints += amount;
+    }
+
+
 }
